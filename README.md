@@ -1,56 +1,36 @@
-ContractIQ
+#ContractIQ
 
 AI-powered contract risk analyzer that detects risky clauses in contracts and calculates a structured risk score.
 
 ContractIQ analyzes uploaded PDF contracts using a large language model to detect clauses such as unlimited liability, indemnification, automatic renewal, and termination restrictions. The system then calculates a risk exposure score using configurable weights stored in a Google Sheets database.
 
-Features
+#Features
 
 Upload and analyze contract PDFs
-
 AI-based clause detection using Groq LLaMA3
-
 Evidence-based analysis with extracted quotes
-
 Risk scoring based on clause weights
-
 Industry-based risk multipliers
-
 Live risk database using Google Sheets
 
-Tech Stack
-
-Backend
-
+#Tech Stack
+**Backend**
 Python
-
 FastAPI
-
 Uvicorn
-
-AI
-
+**AI**
 Groq API (LLaMA3)
-
-Data Source
-
+**Data Source**
 Google Sheets API
-
 gspread
-
-PDF Processing
-
+**PDF Processing**
 pdfplumber
-
-Frontend
-
+**Frontend**
 React + Tailwind (Lovable)
-
-Deployment
-
+**Deployment**
 Render
 
-Project Structure
+#Project Structure
 contractiq-backend/
 │
 ├── main.py
@@ -71,22 +51,21 @@ Connects to Google Sheets to retrieve risk weights and industry multipliers.
 requirements.txt
 Python dependencies.
 
-Running the Backend
-
+**Running the Backend
+**
 Install dependencies
 
 pip install -r requirements.txt
-
-Set environment variables
+**
+Set environment variables**
 
 GROQ_API_KEY=your_api_key
 GOOGLE_CREDENTIALS_JSON='your_google_service_account_json'
 
-Run the server
-
+**Run the server**
 uvicorn main:app --reload --port 8000
 
-Open API docs
+**Open API docs**
 
 http://localhost:8000/docs
 API Endpoint
